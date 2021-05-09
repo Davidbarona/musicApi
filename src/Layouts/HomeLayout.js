@@ -1,18 +1,36 @@
-import React from 'react'
+import { Button, Modal } from 'antd';
+import React, { useState } from 'react'
+import SideBar from '../Components/SideBar/SideBar';
+import "./HomeLayout.less";
+
 
 const HomeLayout = () => {
-    return (
-        <div className=".container-fluid">
-            <div className="row">
-                <div className="col-2 bg-primary vh-100">
-                    Column
-                </div>
-                <div className="col-10 bg-secondary vh-100">
-                    Column
-                </div>
 
-            </div>
-        </div>
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
+    return (
+        <>
+        <Button type="primary" onClick={showModal}>
+          Open Modal
+        </Button>
+        <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
+      </>
     )
 }
 

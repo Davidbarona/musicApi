@@ -2,15 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import AppRouter from './Router/AppRouter';
-import './index.css';
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-import "./main.css"
+import './index.less';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AppRouter />
-  </React.StrictMode>,
+    <AppRouter />,
   document.getElementById('root')
 );
 
