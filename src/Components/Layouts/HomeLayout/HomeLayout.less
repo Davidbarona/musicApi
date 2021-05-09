@@ -1,0 +1,217 @@
+@import '~antd/dist/antd.dark.less';
+
+
+.LayoutContainer{
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to top left, rgb(0, 0, 0), rgb(50, 51, 61));
+}
+
+.LayoutContent{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+//ROW 1-----------------------------------
+.HomeLayoutrow1{
+  height: 8%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.HomeSideBarContainer{
+ width: 20%;
+}
+
+.inputSearchBarHome{
+  width: 300px !important;
+  border-radius: 8px !important;
+}
+
+//ROW 2-----------------------------------
+.HomeLayoutrow2{
+  height: 300px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 0;
+  margin-bottom: 10px;
+} 
+
+.HomeTitleSection{
+  position: relative;
+
+  &::after{
+    position: absolute;
+    font-size: white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.HomeBackImage{
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  filter: brightness(95%);
+  border-radius: 10px;
+}
+
+.HomeBackText{
+  width: 60%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.HomeTopTitle{
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.HomeTopDescription{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  *{
+    margin-right: 20px;
+  }
+}
+
+.HomeButonDetails{
+  font-size: 15px;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+}
+
+.HomeButtonContainer{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+
+//ROW 3-----------------------------------
+.HomeLayoutrow3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+} 
+
+.HomeLayoutCard1{
+  min-height: 80%;
+  width: 75vw;
+  background-color: #202026;
+  border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+  border-left: 1px solid rgba(255, 255, 255, 0.055);
+ 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.HomeAlbumCardContainer{
+  height: 200px;
+  width: 100%;
+   flex-wrap: nowrap;
+  overflow-x: scroll !important;
+  display: flex;
+}
+
+.HomeAlbumCard{
+  width: 130px;
+  height: 170px;
+  margin: 6px;
+  flex: 0 0 auto;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.HomeAlbumCardImage{
+  height: 100px;
+  border-radius: 10px;
+}
+
+.HomeAlbumCardTitle{
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.HomeAlbumCardArtist{
+  font-weight: 600;
+  font-size: 12px;
+  color: rgb(196, 196, 196);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+//ROW 4-----------------------------------
+.HomeLayoutrow4{
+  margin-top: 10px;
+  height: 27%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+} 
+
+.HomeLayoutCard2{
+  min-height: 80%;
+  width: 37vw;
+  background-color: #202026;
+  border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-left: 1px solid rgba(255, 255, 255, 0.048);
+}
+
+.HomeLayoutCard3{
+  min-height: 80%;
+  width: 37vw;
+  background-color: #202026;
+  border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-left: 1px solid rgba(255, 255, 255, 0.048);
+}
+
+@media screen and (max-width:1250px){
+  .HomeLayoutrow1{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .HomeSideBarContainer{
+    width: 0%;
+    display: none;
+   }
+
+}

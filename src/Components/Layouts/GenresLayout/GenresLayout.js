@@ -1,9 +1,10 @@
 import React from 'react'
-import SideBar from '../../Components/SideBar/SideBar'
+import SideBar from '../../SideBar/SideBar';
 import { Input } from 'antd';
 import { BiSearch } from "react-icons/bi";
+import "./GenresLayout.less"
 
-const SearchLayout = () => {
+const GenresLayout = () => {
     return (
         <div className="LayoutContainer">
             <SideBar />
@@ -13,11 +14,11 @@ const SearchLayout = () => {
                     <Input placeholder="Seach" prefix={<BiSearch />} className="inputSearchBarHome" />
                 </div>
 
-                
+
 
             </div>
         </div>
     )
 }
 
-export default SearchLayout
+export default GenresLayout
