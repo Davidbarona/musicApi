@@ -1,7 +1,7 @@
 @import '~antd/dist/antd.dark.css';
 
 .sideBarContainer{
-    width: 200px;
+    width: 250px;
     min-height: 100vh;
     background-color: #18181d;
 }
