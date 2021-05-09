@@ -5,6 +5,7 @@ import { BiSearch } from "react-icons/bi";
 import "./GenresLayout.less"
 
 const GenresLayout = () => {
+    console.log("hola")
     return (
         <div className="LayoutContainer">
             <SideBar />
