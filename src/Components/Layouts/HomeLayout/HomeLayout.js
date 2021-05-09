@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import { Input } from 'antd';
+import { Button, Input } from 'antd';
 import "./HomeLayout.less";
 import { BiSearch } from "react-icons/bi";
 import SideBar from '../../SideBar/SideBar';
-import axios from 'axios';
-require('dotenv').config();
-const token = process.env.TOKEN;
+import { useDispatch, useSelector } from 'react-redux';
+import { getHomeData } from '../../../actions/getHomeElements';
+
+const token = process.env.REACT_APP_TOKEN;
 
 const HomeLayout = () => {
 
@@ -13,20 +14,22 @@ const HomeLayout = () => {
   //   return ("#"+Math.floor(Math.random()*16777215).toString(16))
   // }
 
-  useEffect(() => {
-    axios.get('https://api.spotify.com/v1/browse/new-releases?offset=0&limit=5 ', {
-      headers: {
-        Authorization: 'Bearer ' + "BQA5hrwdIycAUFAUXaZm_szEBvUn50q_ogwqHl6-IRSbIXClQwM41F_ZeDEa4M-6UULVUIY1P_lPjDSgzTc9sWc4GDlLaN_db3jeZyUWQNpoV9vPs1yNzRcMxkcRXchp9Rlyy1_B3QM" //the token is a variable which holds the token
-      }
-    }).then((r) =>
-      console.log(r.data.albums)
-    ) 
+  const dispatch = useDispatch()
 
-  }, [])
+  useEffect(() => {
+    dispatch(getHomeData())
+  }, [dispatch])
+
+  let allData = useSelector(store => store.homeReducer)
+  var images = allData?.data?.data?.albums.items
+  console.log("DATA:",allData)
 
   return (
     <div className="LayoutContainer">
-      <SideBar />
+      
+      <div className="HomeSideBarContainer">
+        <SideBar />
+      </div>
 
       <div className="LayoutContent">
 
@@ -35,6 +38,26 @@ const HomeLayout = () => {
         </div>
 
         <div className="HomeLayoutrow2">
+
+          <div className="HomeBackText">
+            <div className="HomeTitleSection">
+              Trending New Hits
+            </div>
+            <div className="HomeTopTitle">
+              {images && images[1]?.name}
+            </div>
+            <div className="HomeTopDescription">
+              {images && images[1]?.artists[0]?.name}
+            </div>
+            <div className="HomeButtonContainer">
+              <Button className="HomeButonDetails" size="large" type="primary">Details</Button>
+            </div>
+
+          </div>
+          <div className="HomeBackImageContainer">
+            <img className="HomeBackImage" src={images && images[1]?.images[0].url} alt="alt" />
+          </div>
+
         </div>
 
         <div className="HomeLayoutrow3">

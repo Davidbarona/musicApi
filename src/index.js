@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Provider } from 'react-redux';
+import generateStore from './store/store';
 import AppRouter from './Router/AppRouter';
 import './index.less';
 
+const store = generateStore()
+
 ReactDOM.render(
-    <AppRouter />,
+  <Provider store={store}>
+    <React.StrictMode>
+      <AppRouter />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 

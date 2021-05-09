@@ -13,15 +13,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} 
 
 //ROW 1-----------------------------------
 .HomeLayoutrow1{
   height: 8%;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+}
+
+.HomeSideBarContainer{
+ width: 20%;
 }
 
 .inputSearchBarHome{
@@ -29,12 +34,66 @@
   border-radius: 8px !important;
 }
 
-
 //ROW 2-----------------------------------
 .HomeLayoutrow2{
-  height: 33%;
-  width: 100%;
+  height: 350px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 0;
 } 
+
+.HomeTitleSection{
+  position: relative;
+
+  &::after{
+    position: absolute;
+    font-size: white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.HomeBackImage{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(95%);
+  border-radius: 10px;
+}
+
+.HomeBackText{
+  width: 60%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.HomeTopTitle{
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.HomeTopDescription{
+  font-size: 25px;
+}
+
+.HomeButonDetails{
+  font-size: 15px;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+}
+
+.HomeButtonContainer{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
 
 //ROW 3-----------------------------------
 .HomeLayoutrow3{
@@ -42,6 +101,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 1;
 } 
 
 .HomeLayoutCard1{
@@ -49,6 +109,8 @@
   width: 90%;
   background-color: #202026;
   border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+  border-left: 1px solid rgba(255, 255, 255, 0.055);
 }
 
 //ROW 4-----------------------------------
@@ -67,6 +129,8 @@
   width: 49%;
   background-color: #202026;
   border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-left: 1px solid rgba(255, 255, 255, 0.048);
 }
 
 .HomeLayoutCard3{
@@ -74,4 +138,23 @@
   width: 49%;
   background-color: #202026;
   border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-left: 1px solid rgba(255, 255, 255, 0.048);
+}
+
+@media screen and (max-width:1250px){
+  .HomeLayoutrow1{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .HomeSideBarContainer{
+    width: 0%;
+    display: none;
+   }
+
 }

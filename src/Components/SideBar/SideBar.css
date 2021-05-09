@@ -6,3 +6,8 @@
     background-color: #18181d;
 }
 
+@media screen and (max-width: 1250px){
+    .sideBarContainer{
+        display: none;
+    }
+}
