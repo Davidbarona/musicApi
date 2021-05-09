@@ -6,8 +6,6 @@ import SideBar from '../../SideBar/SideBar';
 import { useDispatch, useSelector } from 'react-redux';
 import { getHomeData } from '../../../actions/getHomeElements';
 
-const token = process.env.REACT_APP_TOKEN;
-
 const HomeLayout = () => {
 
   // const color1 = () => {
@@ -22,11 +20,11 @@ const HomeLayout = () => {
 
   let allData = useSelector(store => store.homeReducer)
   var images = allData?.data?.data?.albums.items
-  console.log("DATA:",allData)
+  console.log("DATA:", allData)
 
   return (
     <div className="LayoutContainer">
-      
+
       <div className="HomeSideBarContainer">
         <SideBar />
       </div>
@@ -46,9 +44,16 @@ const HomeLayout = () => {
             <div className="HomeTopTitle">
               {images && images[1]?.name}
             </div>
+
             <div className="HomeTopDescription">
-              {images && images[1]?.artists[0]?.name}
+              <div>
+                {images && images[1]?.artists[0]?.name}
+              </div>
+              <div style={{fontSize:"14px"}}>
+                {images && images[1]?.release_date}
+              </div>
             </div>
+
             <div className="HomeButtonContainer">
               <Button className="HomeButonDetails" size="large" type="primary">Details</Button>
             </div>
@@ -61,7 +66,34 @@ const HomeLayout = () => {
         </div>
 
         <div className="HomeLayoutrow3">
-          <div className="HomeLayoutCard1">
+          <div className="HomeLayoutCard1 " >
+            <div style={{ display: "flex", justifyContent: "space-between", width: "100%", padding: "15px" }}>
+              <div style={{fontSize:"15px", fontWeight:"600"}}>
+                New Releases
+              </div>
+              <div>
+                See all
+              </div>
+            </div>
+            <div className="HomeAlbumCardContainer no-scrollbar">
+              {
+                images && images.map(e => (
+                  <div className="HomeAlbumCard">
+                    {console.log(e)}
+                    <div>
+                      <img className="HomeAlbumCardImage" src={e.images[1].url} alt="alt" />
+                    </div>
+                    <div className="HomeAlbumCardTitle" >
+                      {e.name}
+                    </div>
+                    <div className="HomeAlbumCardArtist" >
+                      {e.artists[0].name}
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+
           </div>
         </div>
 

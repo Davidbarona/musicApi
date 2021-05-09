@@ -7,7 +7,7 @@ export const getHomeData = () => {
 
     return async (dispatch) => {
         console.log("token",token)
-        await axios.get('https://api.spotify.com/v1/browse/new-releases?offset=0&limit=7 ', {
+        await axios.get('https://api.spotify.com/v1/browse/new-releases?offset=0&limit=15 ', {
             headers: {
                 Authorization: token
             }
