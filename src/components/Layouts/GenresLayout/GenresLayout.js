@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import SideBar from '../../SideBar/SideBar';
 import { useDispatch } from 'react-redux';
-import { getHomeData, getHomeGenres } from '../../../actions/getHomeElements';
 import "./GenresLayout.less";
 import SearchBar from '../../SearchBar/SearchBar';
 
