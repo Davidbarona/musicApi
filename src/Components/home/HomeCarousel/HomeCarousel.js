@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Carousel } from 'antd';
 import {useSelector } from 'react-redux';
+import "./HomeCarousel.less"
 
 const HomeCarousel = () => {
 

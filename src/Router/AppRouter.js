@@ -8,7 +8,7 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/home" component={HomeLayout} />
+                <Route exact path="/" component={HomeLayout} />
                 <Route exact path="/search/:params" component={SearchLayout} />
                 <Route exact path="/genres" component={GenresLayout} />
                 <Redirect to="/" />

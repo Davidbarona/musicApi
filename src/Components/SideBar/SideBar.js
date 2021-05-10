@@ -4,13 +4,16 @@ import { SiDiscogs, SiApplemusic } from "react-icons/si";
 import { AiFillSound } from "react-icons/ai";
 import { MdAlbum } from "react-icons/md";
 import { RiPlayList2Fill } from "react-icons/ri";
+import { useLocation } from "react-router-dom";
 
 
 import "./SideBar.less"
 import { NavLink } from 'react-router-dom';
 
-
 const SideBar = () => {
+
+    let location = useLocation();
+
     return (
         <div className="sideBarContainer">
 
@@ -20,13 +23,13 @@ const SideBar = () => {
                      MusicAPI
                     </div>
                 <IconContext.Provider value={{ color: 'white', size: '17px', style: { verticalAlign: 'middle' } }}>
-                    <NavLink to="/home">
-                        <div className="SideBar_Icons SideBar_IconsActive">
+                    <NavLink to="/">
+                        <div className={location.pathname === "/" ? "SideBar_Icons SideBar_IconsActive" : "SideBar_Icons"}>
                             <SiDiscogs /> Explore
                         </div>
                     </NavLink>
                     <NavLink to="/genres">
-                        <div className="SideBar_Icons">
+                        <div className={location.pathname === "/genres" ? "SideBar_Icons SideBar_IconsActive" : "SideBar_Icons"}>
                             <AiFillSound /> Genres
                         </div >
                     </NavLink>
