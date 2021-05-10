@@ -17,7 +17,7 @@ const HomeGenres = () => {
                     See all
               </div>
             </div>
-            <div className="HomeAlbumCardContainer1 no-scrollbar">
+            <div className="HomeAlbumCardContainer1">
                 {
                     genres && genres.map(e => (
                         <div className="HomeAlbumCard1">

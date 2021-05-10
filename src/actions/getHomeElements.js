@@ -20,7 +20,7 @@ export const getHomeData = () => {
 export const getHomeGenres = () => {
 
     return async (dispatch) => {
-        await axios.get('https://api.spotify.com/v1/browse/categories?limit=10', {
+        await axios.get('https://api.spotify.com/v1/browse/categories?limit=15  ', {
             headers: {
                 Authorization: token
             }

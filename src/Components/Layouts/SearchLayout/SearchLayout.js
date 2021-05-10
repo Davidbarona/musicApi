@@ -9,7 +9,6 @@ import { getSearchAlbums, getSearchArtists, getSearchTracks } from '../../../act
 const SearchLayout = () => {
 
     const { params } = useParams();
-    console.log(params)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -20,7 +19,7 @@ const SearchLayout = () => {
     }, [dispatch, params])
 
     let searchTracks = useSelector(store => store.searchReducer)
-    console.log("PRUEBA::::", searchTracks)
+    console.log("PRUEBA:", searchTracks)
 
     return (
         <div className="LayoutContainer">
@@ -36,7 +35,9 @@ const SearchLayout = () => {
                 </div>
 
                 <div>
-                    {/* content */}
+                   <div>
+                       
+                   </div>
 
                 </div>
             </div>

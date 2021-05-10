@@ -10,7 +10,6 @@ const token = process.env.REACT_APP_TOKEN;
 export const getSearchTracks = (params) => {
 
     return async (dispatch) => {
-        console.log("PARAMS:", params)
         await axios.get(`https://api.spotify.com/v1/search?q=${params}&type=track&offset=0&limit=15`, {
             headers: {
                 Authorization: token
@@ -24,7 +23,6 @@ export const getSearchTracks = (params) => {
 export const getSearchAlbums = (params) => {
 
     return async (dispatch) => {
-        console.log("PARAMS:", params)
         await axios.get(`https://api.spotify.com/v1/search?q=${params}&type=album&offset=0&limit=15`, {
             headers: {
                 Authorization: token
@@ -38,7 +36,6 @@ export const getSearchAlbums = (params) => {
 export const getSearchArtists = (params) => {
 
     return async (dispatch) => {
-        console.log("PARAMS:", params)
         await axios.get(`https://api.spotify.com/v1/search?q=${params}&type=artist&offset=0&limit=15`, {
             headers: {
                 Authorization: token

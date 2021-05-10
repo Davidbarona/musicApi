@@ -17,7 +17,7 @@ const NewReleases = () => {
                     See all
               </div>
             </div>
-            <div className="HomeAlbumCardContainer no-scrollbar">
+            <div className="HomeAlbumCardContainer">
                 {
                     images && images.map(e => (
                         <div className="HomeAlbumCard">
