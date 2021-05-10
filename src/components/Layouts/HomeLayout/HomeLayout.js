@@ -3,9 +3,9 @@ import "./HomeLayout.less";
 import SideBar from '../../SideBar/SideBar';
 import { useDispatch } from 'react-redux';
 import { getHomeData, getHomeGenres } from '../../../actions/getHomeElements';
-import NewReleases from '../../Home/NewReleases/NewReleases';
-import HomeGenres from '../../Home/HomeGenres/HomeGenres';
-import HomeCarousel from '../../Home/HomeCarousel/HomeCarousel';
+import NewReleases from '../../../components/Home/NewReleases/NewReleases';
+import HomeGenres from '../../../components/Home/HomeGenres/HomeGenres';
+import HomeCarousel from '../../../components/Home/HomeCarousel/HomeCarousel';
 import SearchBar from '../../SearchBar/SearchBar';
 
 const HomeLayout = () => {

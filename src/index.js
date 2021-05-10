@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import generateStore from './store/store';
-import AppRouter from './Router/AppRouter';
+import AppRouter from './router/AppRouter';
 import './index.less';
 
 const store = generateStore()
