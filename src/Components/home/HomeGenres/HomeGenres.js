@@ -6,7 +6,6 @@ const HomeGenres = () => {
 
     let genresData = useSelector(store => store.homeReducer.genres)
     var genres = genresData?.data?.categories.items
-    console.log("GENRES",genres)
 
     return (
         <div className="HomeLayoutCard11" >
@@ -22,7 +21,6 @@ const HomeGenres = () => {
                 {
                     genres && genres.map(e => (
                         <div className="HomeAlbumCard1">
-                            {console.log(e)}
                             <div>
                                 <img className="HomeAlbumCardImage1" src={e.icons[0].url} alt="alt" />
                             </div>
