@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import SideBar from '../../SideBar/SideBar';
 import { useDispatch } from 'react-redux';
 import { getHomeData, getHomeGenres } from '../../../actions/getHomeElements';
-import SearchBar from '../../home/SearchBar/SearchBar';
 import "./GenresLayout.less";
+import SearchBar from '../../SearchBar/SearchBar';
 
 const GenresLayout = () => {
 
