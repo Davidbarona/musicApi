@@ -9,7 +9,7 @@ const AppRouter = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/home" component={HomeLayout} />
-                <Route exact path="/search" component={SearchLayout} />
+                <Route exact path="/search/:params" component={SearchLayout} />
                 <Route exact path="/genres" component={GenresLayout} />
                 <Redirect to="/" />
             </Switch>
