@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import SideBar from '../../SideBar/SideBar';
 import SearchBar from '../../SearchBar/SearchBar';
 import { useParams } from "react-router-dom";
 import { getSearchAlbums, getSearchArtists, getSearchTracks } from '../../../actions/getSearchData';
-
+import SearchTracks from '../../Search/SearchTracks/SearchTracks';
+import "./SearchLayout.less"
 
 const SearchLayout = () => {
 
@@ -18,8 +19,6 @@ const SearchLayout = () => {
         dispatch(getSearchAlbums(params))
     }, [dispatch, params])
 
-    let searchTracks = useSelector(store => store.searchReducer)
-    console.log("PRUEBA:", searchTracks)
 
     return (
         <div className="LayoutContainer">
@@ -34,12 +33,10 @@ const SearchLayout = () => {
                     <SearchBar />
                 </div>
 
-                <div>
-                   <div>
-                       
-                   </div>
-
+                <div className="SearchLayout_row1">
+                    <SearchTracks />
                 </div>
+
             </div>
         </div>
     )

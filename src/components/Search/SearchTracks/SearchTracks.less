@@ -1,0 +1,68 @@
+.searchTracks_container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchTracks_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchTracks_subTitle1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.searchTracks_subTitle2{
+    font-weight: 15px;
+    color: rgba(255, 255, 255, 0.616);
+}
+
+
+//CARDS
+.searchTracks_cardRowContainer{
+    width: 100%;
+    height: 70px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+    // align-self: flex-start;
+    border-radius: 7px;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.144);
+        cursor: pointer;
+    }
+}
+
+.searchTracks_cardImage{
+   width: 50px;
+   object-fit: cover;
+   margin-left: 13px;
+   margin-right: 15px;
+   border-radius: 5px;
+}
+
+.searchTracks_name{
+    font-size: 18;
+    font-weight: 700;
+}
+
+.searchTracks_cardNames{
+    display: flex;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.637);
+    *{
+        margin-right: 4px;
+    }
+}
+
+.searchTracks_cardDuration{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.726);
+}
