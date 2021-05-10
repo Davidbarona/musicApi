@@ -7,6 +7,7 @@ import SearchBar from '../../SearchBar/SearchBar';
 
 const GenresLayout = () => {
 
+
     // const color1 = () => {
     //   return ("#"+Math.floor(Math.random()*16777215).toString(16))
     // }
@@ -15,10 +16,8 @@ const GenresLayout = () => {
 
     useEffect(() => {
         window.scroll(0, 0)
-        dispatch(getHomeGenres())
-        dispatch(getHomeData())
+    
     }, [dispatch])
-
 
     return (
         <div className="LayoutContainer">
