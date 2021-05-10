@@ -18,10 +18,12 @@ const SideBar = () => {
         <div className="sideBarContainer">
 
             <div className="SideBar_Content">
-                <div className="SideBar_Title">
-                    <SiApplemusic style={{ fontSize: "25px", marginRight: "10px" }} />
+                <NavLink to="/">
+                    <div className="SideBar_Title">
+                        <SiApplemusic style={{ fontSize: "25px", marginRight: "10px", color: "white" }} />
                      MusicAPI
-                    </div>
+                </div>
+                </NavLink>
                 <IconContext.Provider value={{ color: 'white', size: '17px', style: { verticalAlign: 'middle' } }}>
                     <NavLink to="/">
                         <div className={location.pathname === "/" ? "SideBar_Icons SideBar_IconsActive" : "SideBar_Icons"}>

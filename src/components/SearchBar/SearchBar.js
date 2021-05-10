@@ -11,7 +11,6 @@ const SearchBar = () => {
     let history = useHistory();
 
     const onFinish = (values) => {
-        console.log('Success:', values);
         history.push(`/search/${values.search}`)
         values.search = ""
     };

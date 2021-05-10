@@ -17,7 +17,6 @@ const HomeCarousel = () => {
 
     let releases = useSelector(store => store.homeReducer.data)
     var releaseAlbums = releases?.data?.albums.items
-    console.log("RELEASE", releaseAlbums)
 
     return (
         <Carousel effect="fade" {...settings} className="HomeCarousel" >

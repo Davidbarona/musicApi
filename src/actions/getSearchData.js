@@ -3,14 +3,12 @@ export const GET_SEARCH_TRACKS = 'GET_SEARCH_TRACKS';
 export const GET_SEARCH_ARTISTS = 'GET_SEARCH_ARTISTS';
 export const GET_SEARCH_ALBUMS = 'GET_SEARCH_ALBUMS';
 
-
 const token = process.env.REACT_APP_TOKEN;
-
 
 export const getSearchTracks = (params) => {
 
     return async (dispatch) => {
-        await axios.get(`https://api.spotify.com/v1/search?q=${params}&type=track&offset=0&limit=15`, {
+        await axios.get(`https://api.spotify.com/v1/search?q=${params}&type=track&offset=0&limit=5`, {
             headers: {
                 Authorization: token
             }
