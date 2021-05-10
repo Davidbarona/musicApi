@@ -1,7 +1,8 @@
-import { GET_HOME_DATA } from "../actions/getHomeElements";
+import { GET_HOME_DATA, GET_HOME_GENRES } from "../actions/getHomeElements";
 
 const initialState = {
-    data: []
+    data: [],
+    genres: []
 }
 
 export const homeReducer = (state = initialState, action) => {
@@ -11,6 +12,11 @@ export const homeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 data: action.payload
+            }
+        case GET_HOME_GENRES:
+            return {
+                ...state,
+                genres: action.payload
             }
         default:
             return state
