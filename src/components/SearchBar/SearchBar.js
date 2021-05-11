@@ -29,7 +29,7 @@ const SearchBar = () => {
             <Form onFinish={onFinish}>
                 <Form.Item
                     name="search">
-                    <Input placeholder="Seach" prefix={<BiSearch />} className="inputSearchBarHome" />
+                    <Input placeholder="Search" prefix={<BiSearch />} className="inputSearchBarHome" />
                 </Form.Item>
             </Form>
 

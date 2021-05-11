@@ -5,6 +5,7 @@ import SearchBar from '../../SearchBar/SearchBar';
 import { useParams } from "react-router-dom";
 import { getSearchAlbums, getSearchArtists, getSearchTracks } from '../../../actions/getSearchData';
 import SearchTracks from '../../Search/SearchTracks/SearchTracks';
+import SearchArtists from '../../Search/SearchArtists/SearchArtists';
 import "./SearchLayout.less"
 
 const SearchLayout = () => {
@@ -35,6 +36,10 @@ const SearchLayout = () => {
 
                 <div className="SearchLayout_row1">
                     <SearchTracks />
+                </div>
+
+                <div className="SearchLayout_row1">
+                    <SearchArtists />
                 </div>
 
             </div>

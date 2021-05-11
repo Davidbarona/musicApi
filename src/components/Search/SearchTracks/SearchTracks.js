@@ -12,7 +12,6 @@ const SearchTracks = () => {
 
     let searchData = useSelector(store => store.searchReducer.tracks)
     let tracks = searchData?.data?.tracks.items
-    console.log("TRACKS---------------:", searchData?.data?.tracks.items)
 
     return (
         <div className="searchTracks_container">
