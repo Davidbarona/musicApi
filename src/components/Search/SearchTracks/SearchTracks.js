@@ -1,3 +1,4 @@
+import { Divider } from 'antd';
 import React from 'react'
 import { useSelector } from 'react-redux';
 import "./SearchTracks.less"
@@ -21,7 +22,6 @@ const SearchTracks = () => {
             </div>
             {
                 tracks && tracks.map(e => (
-
                     <div className="searchTracks_cardRowContainer">
 
                         <div style={{ display: "flex", alignItems: "center" }}>

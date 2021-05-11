@@ -9,7 +9,7 @@ const HomeCarousel = () => {
         dots: false,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3000,
         pauseOnHover: false,
     
       };

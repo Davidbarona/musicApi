@@ -17,21 +17,23 @@ const SearchBar = () => {
 
     return (
         <>
-            <div className="HomeLayoutIcons">
-                <div className="SearchBarNavButtons" onClick={() => history.goBack()}>
-                    <IoChevronBackCircle />
+            <div className="SearchBar_Container">
+                <div className="HomeLayoutIcons">
+                    <div className="SearchBarNavButtons" onClick={() => history.goBack()}>
+                        <IoChevronBackCircle />
+                    </div>
+                    <div className="SearchBarNavButtons" onClick={() => history.goForward()} >
+                        <IoChevronForwardCircle />
+                    </div>
                 </div>
-                <div className="SearchBarNavButtons" onClick={() => history.goForward()} >
-                    <IoChevronForwardCircle />
-                </div>
-            </div>
 
-            <Form onFinish={onFinish}>
-                <Form.Item
-                    name="search">
-                    <Input placeholder="Search" prefix={<BiSearch />} className="inputSearchBarHome" />
-                </Form.Item>
-            </Form>
+                <Form onFinish={onFinish}>
+                    <Form.Item
+                        name="search">
+                        <Input placeholder="Search" prefix={<BiSearch />} className="inputSearchBarHome" />
+                    </Form.Item>
+                </Form>
+            </div>
 
         </>
     )

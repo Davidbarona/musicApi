@@ -36,11 +36,11 @@ const HomeLayout = () => {
           <HomeCarousel />
         </div>
 
-        <div className="HomeLayoutrow">
+        <div className="HomeLayoutrow2">
           <NewReleases />
         </div>
 
-        <div className="HomeLayoutrow">
+        <div className="HomeLayoutrow2">
           <HomeGenres />
         </div>
 
