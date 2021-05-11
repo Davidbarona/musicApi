@@ -1,15 +1,15 @@
 .HomeLayoutCard1{   
-    width: 77vw;
+    width: 75vw;
     display: flex;
     flex-direction: column; 
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    // padding-left: 10px;
+    // padding-right: 10px;
     margin-bottom: 50px;
   }
   
   .HomeAlbumCardContainer{
-    height: 280px !important;
+    height: 290px !important;
     width: 100%;
      flex-wrap: nowrap;
     overflow-x:auto !important;
@@ -19,35 +19,49 @@
   }
   
   .HomeAlbumCard{
-    width: 228px;
-    height: 230px;
+    width: 218px;
+    height: 275px;
     flex: 0 0 auto;
     display: flex;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 22px;
- 
+    margin-right: 18px;
+    margin-left: 4px;
+    border-radius: 7px;
+    background: linear-gradient(to top right, #8679f865 0%, rgba(42,52,88,1) 51%, rgb(46, 65, 80) 70%, rgb(46, 62, 94) 100%);
+    padding: 20px;
+    
+    transition: all .2s ease-in-out;
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.274);
+      transform: scale(1.03);
+
+      .HomeAlbumCardImage{
+        transform: scale(1.09);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.466);
+      }
+    }
   }
   
   .HomeAlbumCardImage{
     height: 180px;
-    width: 220px;
+    width: 180px;
     object-fit: cover;
     border-radius: 5px;
     transition: all .2s ease-in-out;
-
-    &:hover{
-       transform: scale(1.05);
-       cursor: pointer;
-    }
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.24);
   }
   
   .HomeAlbumCardTitle{
-    margin-top: 10px;
+    margin-top: 18px;
     font-weight: 800;
     font-size: 15px;
+
+    white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
   }
   
   .HomeAlbumCardArtist{
@@ -64,3 +78,5 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+

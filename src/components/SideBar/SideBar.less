@@ -15,7 +15,10 @@
 
     // background-color: #c6d7ff1a;
     // backdrop-filter: blur(100px);
-    background: linear-gradient(to top, rgba(32, 41, 58, 0.685) 10%, rgba(36, 51, 71, 0.685) 32%, rgba(45, 66, 89, 0.692) 44%, rgba(47, 82, 109, 0.836) 68%, rgba(44, 92, 100, 0.911) 89%);
+    // background: linear-gradient(to top, rgba(32, 41, 58, 0.685) 10%, rgba(36, 51, 71, 0.685) 32%, rgba(45, 66, 89, 0.692) 44%, rgba(47, 82, 109, 0.836) 68%, rgba(44, 92, 100, 0.911) 89%);
+    background: linear-gradient(to top, rgba(31, 38, 57, 0.863) 0%, rgba(42, 48, 79, 0.753) 43%, rgba(51, 60, 109, 0.842) 73%, rgba(34,68,75,1) 100%);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.103);
 
 }
 
@@ -30,25 +33,32 @@
 }
 
 .SideBar_Icons{
-    padding: 6px;
+    padding: 10px;
     padding-left: 47px;
     padding-right: 47px;
     border-radius: 7px;
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 20px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.705);
     *{
         margin-right: 12px;
     }
     &:hover{
-    color: rgba(255, 255, 255, 0.425);
+        color: white;
     }
 }
 
 .SideBar_IconsActive{
-    background-color: #5773ff;
+    background: rgb(75,75,200);
+    background: linear-gradient(156deg, rgba(75,75,200,1) 0%, rgba(131,64,212,1) 100%); 
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.116);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+        color: rgba(255, 255, 255, 0.836) !important;
+      }
 }
 
 
