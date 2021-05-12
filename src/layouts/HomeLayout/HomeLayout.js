@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
-import "./HomeLayout.less";
-import SideBar from '../../SideBar/SideBar';
 import { useDispatch } from 'react-redux';
-import { getHomeData, getHomeGenres, getHomePlaylists } from '../../../actions/getHomeElements';
-import NewReleases from '../../../components/Home/NewReleases/NewReleases';
-import HomeGenres from '../../../components/Home/HomeGenres/HomeGenres';
-import HomeCarousel from '../../../components/Home/HomeCarousel/HomeCarousel';
-import SearchBar from '../../SearchBar/SearchBar';
-import HomePlaylists from '../../Home/HomePlaylists/HomePlaylists';
+
+import { getHomeData, getHomeGenres, getHomePlaylists } from '../../actions/getHomeElements';
+import SideBar from '../../components/SideBar/SideBar';
+import NewReleases from '../../components/Home/NewReleases/NewReleases';
+import HomeGenres from '../../components/Home/HomeGenres/HomeGenres';
+import HomeCarousel from '../../components/Home/HomeCarousel/HomeCarousel';
+import HomePlaylists from '../../components/Home/HomePlaylists/HomePlaylists';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import "./HomeLayout.less";
 
 const HomeLayout = () => {
 

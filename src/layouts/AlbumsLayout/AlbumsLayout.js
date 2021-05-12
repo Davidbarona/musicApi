@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import SideBar from '../../SideBar/SideBar';
+import SideBar from '../../components/SideBar/SideBar';
 import { useDispatch } from 'react-redux';
-import { getHomeData, getHomeGenres, getHomePlaylists } from '../../../actions/getHomeElements';
-import SearchBar from '../../SearchBar/SearchBar';
+import { getHomeData, getHomeGenres, getHomePlaylists } from '../../actions/getHomeElements';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import "./AlbumsLayout.less";
 
 const AlbumsLayout = () => {

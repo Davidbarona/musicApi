@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { IoChevronForwardOutline, IoChevronBackOutline } from "react-icons/io5";
 import { SliderButtons, Wrapper, Slider, handleOnClickSlide } from '../../../helpers/slider';
 import "./HomeGenres.less"
+import { Link } from 'react-router-dom';
 
 const HomeGenres = () => {
 
@@ -18,7 +19,7 @@ const HomeGenres = () => {
                     Genres
               </div>
                 <div style={{ display: "flex", alignItems: "center", marginRight: "10px", fontSize: "14px" }}>
-                    See all
+                    <Link to="/genres"><div style={{color:"white", marginLeft:"10px", marginBottom:"5px"}}>See all</div></Link>
                     <SliderButtons>
                         <button onClick={() => handleOnClickSlide('left', slider)}><IoChevronBackOutline /></button>
                         <button onClick={() => handleOnClickSlide('right', slider)}><IoChevronForwardOutline /></button>

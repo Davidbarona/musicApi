@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
-import AlbumsLayout from '../components/Layouts/AlbumsLayout/AlbumsLayout';
-import GenresLayout from '../components/Layouts/GenresLayout/GenresLayout';
-import HomeLayout from '../components/Layouts/HomeLayout/HomeLayout';
-import SearchLayout from '../components/Layouts/SearchLayout/SearchLayout';
+import HomeLayout from "../layouts/HomeLayout/HomeLayout";
+import GenresLayout from "../layouts/GenresLayout/GenresLayout";
+import AlbumsLayout from "../layouts/AlbumsLayout/AlbumsLayout";
+import SearchLayout from "../layouts/SearchLayout/SearchLayout";
+
 
 const AppRouter = () => {
     return (

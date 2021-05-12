@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import SideBar from '../../SideBar/SideBar';
-import SearchBar from '../../SearchBar/SearchBar';
+import SideBar from '../../components/SideBar/SideBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import { useParams } from "react-router-dom";
-import { getSearchAlbums, getSearchArtists, getSearchPlaylists, getSearchTracks } from '../../../actions/getSearchData';
-import SearchTracks from '../../Search/SearchTracks/SearchTracks';
-import SearchArtists from '../../Search/SearchArtists/SearchArtists';
-import SearchAlbums from '../../Search/SearchAlbums/SearchAlbums';
+import { getSearchAlbums, getSearchArtists, getSearchPlaylists, getSearchTracks } from '../../actions/getSearchData';
+import SearchTracks from '../../components/Search/SearchTracks/SearchTracks';
+import SearchArtists from '../../components/Search/SearchArtists/SearchArtists';
+import SearchAlbums from '../../components/Search/SearchAlbums/SearchAlbums';
 
 import "./SearchLayout.less"
-import SearchPlaylist from '../../Search/SearchPlaylist/SearchPlaylist';
+import SearchPlaylist from '../../components/Search/SearchPlaylist/SearchPlaylist';
 
 const SearchLayout = () => {
 
