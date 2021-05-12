@@ -1,0 +1,57 @@
+.AlbumSearchAlbumCard{
+    width: 210px;
+    height: 265px;
+    flex: 0 0 auto;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 18px;
+    margin-left: 4px;
+    border-radius: 7px;
+    background: linear-gradient(to top right, #8679f83f 0%, rgba(42,52,88,1) 51%, rgb(46, 65, 80) 70%, rgb(46, 62, 94) 100%);
+    padding: 20px;
+    
+    transition: all .2s ease-in-out;
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.171);
+      transform: scale(1.03);
+
+      .AlbumSearchAlbumCardImage{
+        transform: scale(1.09);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.466);
+      }
+    }
+  }
+  
+  .AlbumSearchAlbumCardImage{
+    height: 155px;
+    width: 155px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.24);
+  }
+  
+  .AlbumSearchAlbumCardTitle{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 13px;
+
+//     white-space: nowrap;
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+  }
+  
+  .AlbumSearchAlbumCardArtist{
+    font-weight: 600;
+    font-size: 11px;
+    color: rgb(196, 196, 196);
+    height: 11px;
+
+        white-space: nowrap;
+//    overflow: hidden;
+   text-overflow: ellipsis;
+  }
+  

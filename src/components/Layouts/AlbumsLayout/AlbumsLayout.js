@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react'
-import "./HomeLayout.less";
 import SideBar from '../../SideBar/SideBar';
 import { useDispatch } from 'react-redux';
 import { getHomeData, getHomeGenres, getHomePlaylists } from '../../../actions/getHomeElements';
-import NewReleases from '../../../components/Home/NewReleases/NewReleases';
-import HomeGenres from '../../../components/Home/HomeGenres/HomeGenres';
-import HomeCarousel from '../../../components/Home/HomeCarousel/HomeCarousel';
 import SearchBar from '../../SearchBar/SearchBar';
-import HomePlaylists from '../../Home/HomePlaylists/HomePlaylists';
+import "./AlbumsLayout.less";
 
-const HomeLayout = () => {
+const AlbumsLayout = () => {
 
   const dispatch = useDispatch()
 
@@ -33,26 +29,13 @@ const HomeLayout = () => {
           <SearchBar />
         </div>
 
-        <div className="HomeLayoutrow2">
+        {/* <div className="HomeLayoutrow2">
           <HomeCarousel />
-        </div>
-
-
-        <div className="HomeLayoutrow2">
-          <NewReleases />
-        </div>
-
-        <div className="HomeLayoutrow2-genres">
-          <HomeGenres />
-        </div>
-
-        <div className="HomeLayoutrow2">
-          <HomePlaylists />
-        </div>
+        </div> */}
 
       </div>
     </div>
   )
 }
 
-export default HomeLayout
+export default AlbumsLayout

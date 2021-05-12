@@ -1,41 +1,46 @@
 import React, { useEffect } from 'react'
 import SideBar from '../../SideBar/SideBar';
 import { useDispatch } from 'react-redux';
-import "./GenresLayout.less";
+import { getHomeData, getHomeGenres, getHomePlaylists } from '../../../actions/getHomeElements';
 import SearchBar from '../../SearchBar/SearchBar';
+import { getGenres } from '../../../actions/getGenres';
+import "./GenresLayout.less";
+import { useSelector } from 'react-redux';
 
 const GenresLayout = () => {
 
+  const dispatch = useDispatch()
+  let genresData = useSelector(store => store.genresReducer.genres)
+  console.log(genresData)
 
-    // const color1 = () => {
-    //   return ("#"+Math.floor(Math.random()*16777215).toString(16))
-    // }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    dispatch(getHomeGenres())
+    dispatch(getHomeData())
+    dispatch(getHomePlaylists())
+    dispatch(getGenres())
+  }, [dispatch])
 
-    const dispatch = useDispatch()
 
-    useEffect(() => {
-        window.scroll(0, 0)
-    
-    }, [dispatch])
+  return (
+    <div className="LayoutContainer">
+      <div className="HomeSideBarContainer">
+        <SideBar />
+      </div>
 
-    return (
-        <div className="LayoutContainer">
+      <div className="LayoutContent">
 
-            <div className="HomeSideBarContainer">
-                <SideBar />
-            </div>
-            <div className="GenresLayoutContent">
-
-                <div className="GenresLayoutrow1">
-                    <SearchBar />
-                </div>
-
-                <div>
-                    {/* content */}
-                </div>
-            </div>
+        <div className="HomeLayoutrow1">
+          <SearchBar />
         </div>
-    )
+
+        <div className="GenresLayoutrow">
+
+        </div>
+
+      </div>
+    </div>
+  )
 }
 
 export default GenresLayout
