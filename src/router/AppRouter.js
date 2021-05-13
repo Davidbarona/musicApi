@@ -4,7 +4,7 @@ import HomeLayout from "../layouts/HomeLayout/HomeLayout";
 import GenresLayout from "../layouts/GenresLayout/GenresLayout";
 import AlbumsLayout from "../layouts/AlbumsLayout/AlbumsLayout";
 import SearchLayout from "../layouts/SearchLayout/SearchLayout";
-
+import Prueba from "../Prueba/Prueba";
 
 const AppRouter = () => {
     return (
@@ -14,6 +14,8 @@ const AppRouter = () => {
                 <Route exact path="/genres" component={GenresLayout} />
                 <Route exact path="/albums" component={AlbumsLayout} />
                 <Route exact path="/search/:params" component={SearchLayout} />
+                <Route exact path="/prueba" component={Prueba} />
+
                 <Redirect to="/" />
             </Switch>
         </BrowserRouter>
