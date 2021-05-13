@@ -35,9 +35,13 @@ const SideBar = () => {
                             <AiFillSound /> Genres
                         </div >
                     </NavLink>
-                    <div className="SideBar_Icons">
-                        <MdAlbum /> Albums
+
+                    <NavLink to="/albums">
+                        <div className={location.pathname === "/albums" ? "SideBar_Icons SideBar_IconsActive" : "SideBar_Icons"}>
+                            <MdAlbum /> Albums
                         </div>
+                    </NavLink>
+
                     <div className="SideBar_Icons">
                         <RiPlayList2Fill /> Playlist
                         </div>

@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import SideBar from '../../SideBar/SideBar';
-import SearchBar from '../../SearchBar/SearchBar';
+import SideBar from '../../components/SideBar/SideBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import { useParams } from "react-router-dom";
-import { getSearchAlbums, getSearchArtists, getSearchTracks } from '../../../actions/getSearchData';
-import SearchTracks from '../../Search/SearchTracks/SearchTracks';
+import { getSearchAlbums, getSearchArtists, getSearchPlaylists, getSearchTracks } from '../../actions/getSearchData';
+import SearchTracks from '../../components/Search/SearchTracks/SearchTracks';
+import SearchArtists from '../../components/Search/SearchArtists/SearchArtists';
+import SearchAlbums from '../../components/Search/SearchAlbums/SearchAlbums';
+
 import "./SearchLayout.less"
-import SearchArtists from '../../Search/SearchArtists/SearchArtists';
+import SearchPlaylist from '../../components/Search/SearchPlaylist/SearchPlaylist';
 
 const SearchLayout = () => {
 
@@ -18,8 +21,8 @@ const SearchLayout = () => {
         dispatch(getSearchTracks(params))
         dispatch(getSearchArtists(params))
         dispatch(getSearchAlbums(params))
+        dispatch(getSearchPlaylists(params))
     }, [dispatch, params])
-
 
     return (
         <div className="LayoutContainer">
@@ -40,6 +43,14 @@ const SearchLayout = () => {
 
                 <div className="SearchLayout_row2">
                     <SearchArtists />
+                </div>
+
+                <div className="SearchLayout_row2">
+                    <SearchAlbums />
+                </div>
+
+                <div className="SearchLayout_row2">
+                    <SearchPlaylist />
                 </div>
 
             </div>

@@ -1,0 +1,56 @@
+@import "~antd/dist/antd.dark.less";
+
+.GenresLayoutrow{
+  height: auto;
+  display: inline-block;
+  justify-content: center;
+  text-align: center !important;
+  margin-left: 3%;
+}
+
+.genres_CardContainer{
+  height: 210px;
+  width: 190px;
+  display: inline-block;
+  position:relative;
+  padding-top: 10px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  background: linear-gradient(to top right, #8679f865 0%, rgb(62, 79, 141) 51%, rgb(58, 98, 129) 70%, rgb(68, 94, 146) 100%);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.123);
+    transform: scale(1.03);
+
+    .genres_CardImage{
+      transform: scale(1.03);
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.466);
+    }
+  }
+}
+
+.genres_CardImage{
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.247);
+  transition: all .2s ease-in-out;
+}
+
+.Genres_Title{
+  margin-left: 7%;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.genres_CardTitle{
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 8px;
+}

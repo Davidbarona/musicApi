@@ -1,9 +1,10 @@
-import { GET_SEARCH_TRACKS, GET_SEARCH_ALBUMS, GET_SEARCH_ARTISTS } from "../actions/getSearchData";
+import { GET_SEARCH_TRACKS, GET_SEARCH_ALBUMS, GET_SEARCH_ARTISTS, GET_SEARCH_PLAYLIST } from "../actions/getSearchData";
 
 const initialState = {
     tracks: [],
     artists: [],
-    albums: []
+    albums: [],
+    playlist: []
 }
 
 export const searchReducer = (state = initialState, action) => {
@@ -23,6 +24,11 @@ export const searchReducer = (state = initialState, action) => {
             return {
                 ...state,
                 albums: action.payload
+            }
+        case GET_SEARCH_PLAYLIST:
+            return {
+                ...state,
+                playlist: action.payload
             }
         default:
             return state
